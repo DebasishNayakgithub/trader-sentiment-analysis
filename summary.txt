@@ -1,0 +1,41 @@
+Trader Performance vs Market Sentiment — Summary
+
+Methodology
+
+This analysis examines how market sentiment, measured using the Fear and Greed Index, impacts trader performance on Hyperliquid between May 2023 and May 2025.
+
+The two datasets were merged on a daily level, aligning each trader’s activity with the corresponding sentiment value. The data was then aggregated at the account–day level to compute key metrics such as daily PnL (net of fees), win rate, number of trades, long ratio, cross-margin usage, and trading volume.
+
+The analysis compares these metrics across three sentiment regimes: Fear, Neutral, and Greed. A Mann–Whitney U test was used to assess whether differences in PnL distributions between Fear and Greed periods are statistically significant. In addition, a Random Forest model was trained to predict next-day profitability based on behavioral and sentiment features.
+
+---
+
+Key Insights
+
+Fear periods produce the highest average daily PnL, but the lowest median PnL. This indicates that returns during Fear are highly skewed and driven by a small number of large gains rather than consistent performance across traders.
+
+Trading activity increases significantly during Fear, with higher trade counts and volume. However, this increase in activity does not translate into better median outcomes, suggesting that traders may be overtrading during volatile conditions.
+
+There is a noticeable shift in positioning behavior. Traders tend to take slightly more long positions during Fear and become more neutral or short during Greed. This reflects a contrarian tendency, particularly a “buy-the-dip” approach during market downturns.
+
+Cross-margin usage shows a strong relationship with profitability. Traders with higher cross-margin usage consistently outperform others, indicating better capital efficiency and risk management practices.
+
+The predictive model achieves a ROC-AUC of 0.715, indicating that a combination of sentiment and behavioral metrics can provide meaningful signals for next-day profitability.
+
+---
+
+Strategy Recommendations
+
+Trading frequency should be controlled during Fear periods. Limiting the number of trades can help reduce unnecessary exposure to noise and transaction costs, improving overall consistency.
+
+Position sizing should be adjusted based on sentiment. Larger position sizes can be deployed during Greed periods where returns are more stable, while exposure should be reduced during Fear to manage volatility.
+
+Traders should focus on sentiment transitions, particularly from Fear to Neutral or Greed, as these phases tend to offer more favorable and stable trading conditions.
+
+---
+
+Conclusion
+
+Market sentiment has a clear impact on both trader behavior and performance. Fear leads to higher activity and greater variability in outcomes, while Greed is associated with more consistent returns.
+
+An effective strategy is not to react emotionally to market conditions, but to systematically adjust trading behavior and risk exposure based on the prevailing sentiment regime.
